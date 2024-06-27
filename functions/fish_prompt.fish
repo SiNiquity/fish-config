@@ -86,5 +86,7 @@ function fish_prompt
         end
     end
 
-    echo -n -s $arrow ' '$cwd $repo_info $normal ' '
+    set -l date_value (date +%H:%M)
+    set -l date "$yellow$date_value"
+    echo -n -s $date ' ' $arrow ' '$cwd $repo_info $normal ' '
 end
